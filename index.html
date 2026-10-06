@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0305" />
+  <meta name="description" content="A little love story, made for my favourite person." />
+  <title>For My Favourite Person ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- BACKGROUND -->
+  <div class="bg-layer" aria-hidden="true"></div>
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="blob b3" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="fade-up" style="--d:.05s">
+        <div class="glow-heart">
+          <svg viewBox="0 0 32 30" aria-hidden="true">
+            <defs>
+              <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#ffd0c0"/>
+                <stop offset="45%"  stop-color="#e56b8f"/>
+                <stop offset="100%" stop-color="#7a1730"/>
+              </linearGradient>
+            </defs>
+            <path d="M16 29S1 19.2 1 10.4C1 5.7 4.7 2 9.3 2c2.9 0 5.5 1.5 6.7 3.8C17.2 3.5 19.8 2 22.7 2 27.3 2 31 5.7 31 10.4 31 19.2 16 29 16 29z"/>
+          </svg>
+        </div>
+      </div>
+
+      <p class="hero-eyebrow fade-up" style="--d:.3s">made with love · only for you</p>
+
+      <h1 class="hero-title fade-up" style="--d:.5s">
+        For My <em>Favourite</em> Person ❤️
+      </h1>
+
+      <p class="hero-sub fade-up" style="--d:.75s">
+        Of all the people in all the world, my heart chose you.
+        And it would choose you again — every single time.
+      </p>
+
+      <div class="fade-up" style="--d:1.05s">
+        <button class="btn-primary" id="beginBtn" type="button">
+          Begin Our Story ❤️
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-hint fade-in" style="--d:1.6s" aria-hidden="true"><span></span></div>
+  </header>
+
+  <!-- STORY TIMELINE -->
+  <section class="section" id="story">
+    <h2 class="section-title reveal">Our Story</h2>
+    <p class="section-sub reveal" style="--d:.08s">chapter by chapter</p>
+
+    <div class="ornament reveal" style="--d:.14s" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 32 30" width="12" height="11"><path fill="currentColor" d="M16 29S1 19.2 1 10.4C1 5.7 4.7 2 9.3 2c2.9 0 5.5 1.5 6.7 3.8C17.2 3.5 19.8 2 22.7 2 27.3 2 31 5.7 31 10.4 31 19.2 16 29 16 29z"/></svg>
+      <span class="line"></span>
+    </div>
+
+    <div class="timeline">
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter One</span>
+          <h3>The Day Everything Changed</h3>
+          <p>I didn't know it then, but the moment you walked into my life, every ordinary day quietly became a story worth telling.</p>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter Two</span>
+          <h3>Your Smile</h3>
+          <p>There's a particular way you smile when you're truly happy. I've memorised it. It's the reason bad days don't stay bad for very long anymore.</p>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter Three</span>
+          <h3>A Thousand Little Things</h3>
+          <p>The way you laugh at your own jokes. The way you go quiet when you're thinking. It's never been one big thing — it's a thousand little ones.</p>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter Four</span>
+          <h3>Through Every Storm</h3>
+          <p>We've had our grey days. But somehow, even then, you were the calm on the other side of it.</p>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter Five</span>
+          <h3>Ordinary Days</h3>
+          <p>My favourite memories aren't the big ones. They're the quiet ones — shared silences, silly texts, the sound of your voice at the end of a long day.</p>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="glass tl-card">
+          <span class="tl-chapter">Chapter Six</span>
+          <h3>Forever, Starting Now</h3>
+          <p>This isn't the end of the story. It's barely the beginning. Whatever comes next, I want it with you.</p>
+        </div>
+      </article>
+
+      <!-- LETTER CHAPTER 1 -->
+      <article class="tl-item reveal tl-special">
+        <span class="tl-dot tl-dot-special" aria-hidden="true"></span>
+        <div class="glass tl-card tl-card-letter">
+          <span class="tl-chapter tl-chapter-letter">A Letter · For Jaanu</span>
+          <h3>1500 Kilometres, One Heart</h3>
+
+          <p class="letter-line">
+            Jaanu, aaj apko bobos me pain hai. Ye hormonal changes ki wajah se ho sakta hai —
+            especially periods ke aas-paas. Kaafi time se periods nahi aya hai, aur mujhe lagta hai
+            ye usi ka sign ho sakta hai. Mai 100% confirm nahi hu, par jo science kehti hai aur
+            jo mujhe samajh aata hai, wo bata raha hu.
+          </p>
+          <p class="letter-line">
+            Jaanu, mai <span class="hl">1500 km door hu</span> — lekin iska matlab ye nahi ki aap
+            akeli ho. Aapko jab bhi meri zarurat ho, bas message ya call kar dena. Aapko sab kuch
+            akela handle karne ki zarurat nahi hai.
+          </p>
+          <p class="letter-line">
+            Aur jaanu, periods aaye to aap mujhpe pura gussa nikal dena. Jitna bharas ho sab nikal
+            dena. Mai bura nahi maanunga. Agar mood off ho, irritation ho, gussa aaye ya rona aaye —
+            jo bhi feel ho mujhe bata dena. Mai samajhne ki kosis karunga. Bas apna khyal rakhna bachha.
+          </p>
+          <p class="letter-line">
+            Ye sab mai sirf isliye bol raha hu kyunki mujhe aapki bahot fikr hai. Aap meri rashmalai ho,
+            isliye aapka khyal rakhna meri responsibility jaisa feel hota hai. 🙈❤️
+          </p>
+          <p class="letter-sign">I LOVE YOU JAANU. ❤️😘</p>
+          <p class="letter-ps">— Apka lolipop, yahin hai. 🫶</p>
+        </div>
+      </article>
+
+      <!-- LETTER CHAPTER 2 -->
+      <article class="tl-item reveal tl-special">
+        <span class="tl-dot tl-dot-special" aria-hidden="true"></span>
+        <div class="glass tl-card tl-card-letter">
+          <span class="tl-chapter tl-chapter-letter">A Letter · From My Heart</span>
+          <h3>Every Notification, Every Thought</h3>
+
+          <p class="letter-line">
+            Jaanu, pata hai — mujhe gussa aane ke baad sirf aapse baat karne ka mann karta hai.
+            Jab bhi kuch hota hai ya mera mood kharab hota hai, sabse pehle mere dimaag me aap hi aati ho.
+            Aisa lagta hai ki bas apse baat kar loon to sab kuch thoda theek ho jayega. ❤️
+          </p>
+          <p class="letter-line">
+            Din me kitna bhi kaam ho, kitni bhi tension ho — pata nahi kaise beech-beech me aap mere
+            khayalo me aa hi jaati ho. Kabhi aapki baatein yaad aati hain, kabhi aapki smile, kabhi humari
+            chhoti-chhoti conversations. Aur sach bolu jaanu, in chhoti-chhoti yaadon se bhi mere face
+            par smile aa jaati hai.
+          </p>
+          <p class="letter-line">
+            Waise phone me to bahot saare messages aur notifications aate rehte hai, lekin
+            <span class="hl">Snap ki jaise hi notification aata hai na</span> — chehre pe alag hi muskan hoti hai.
+            Pata nahi notification me kya hai, bas naam dekhte hi mood automatically change ho jata hai.
+          </p>
+          <p class="letter-line">
+            Aur ye aap kabhi mat sochna jaanu ki apke wajah se mera mood kharab hota hai. Aap mera mood
+            kharab nahi karti — balki aap hi un logon me se ho jo mera mood theek kar sakti ho.
+            Chahe din kitna bhi kharab gaya ho, bas aap saamne aa jao ya aapse baat ho jaye to lagta hai —
+            chalo, ab sab theek hai. 🫶
+          </p>
+          <p class="letter-line">
+            Bas itna samajh lena jaanu — aap mere liye sirf koi normal person nahi ho. Aap meri khushi
+            ka ek bahot important reason ho.
+          </p>
+          <p class="letter-sign">I love you jaanu. ❤️😘</p>
+          <p class="letter-ps">— Chahe kitni bhi doori ho, meri care aapse kabhi door nahi hogi. 🫶❤️</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY -->
+  <section class="section" id="gallery">
+    <h2 class="section-title reveal">Our Moments</h2>
+    <p class="section-sub reveal" style="--d:.08s">every photo has a story</p>
+
+    <div class="ornament reveal" style="--d:.14s" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 32 30" width="12" height="11"><path fill="currentColor" d="M16 29S1 19.2 1 10.4C1 5.7 4.7 2 9.3 2c2.9 0 5.5 1.5 6.7 3.8C17.2 3.5 19.8 2 22.7 2 27.3 2 31 5.7 31 10.4 31 19.2 16 29 16 29z"/></svg>
+      <span class="line"></span>
+    </div>
+
+    <div class="story-carousel reveal" id="photoCarousel" style="--d:.2s">
+      <div class="stage" id="photoStage" aria-label="Photo gallery"></div>
+
+      <div class="story-caption" id="photoCaption">
+        <span class="story-chapter" id="photoChapter">Chapter One</span>
+        <h3 id="photoTitle">Title</h3>
+        <p id="photoStory">Story</p>
+      </div>
+
+      <button class="nav prev" id="photoPrev" type="button" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="nav next" id="photoNext" type="button" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div class="dots" id="photoDots"></div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="section" id="videos">
+    <h2 class="section-title reveal">Our Little Films</h2>
+    <p class="section-sub reveal" style="--d:.08s">moving memories, with words</p>
+
+    <div class="ornament reveal" style="--d:.14s" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 32 30" width="12" height="11"><path fill="currentColor" d="M16 29S1 19.2 1 10.4C1 5.7 4.7 2 9.3 2c2.9 0 5.5 1.5 6.7 3.8C17.2 3.5 19.8 2 22.7 2 27.3 2 31 5.7 31 10.4 31 19.2 16 29 16 29z"/></svg>
+      <span class="line"></span>
+    </div>
+
+    <div class="story-carousel v-carousel reveal" id="videoCarousel" style="--d:.2s">
+      <div class="v-stage" id="videoStage" aria-label="Video gallery"></div>
+
+      <div class="story-caption" id="videoCaption">
+        <span class="story-chapter" id="videoChapter">Chapter One</span>
+        <h3 id="videoTitle">Title</h3>
+        <p id="videoStory">Story</p>
+      </div>
+
+      <button class="nav prev" id="videoPrev" type="button" aria-label="Previous video">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="nav next" id="videoNext" type="button" aria-label="Next video">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div class="dots" id="videoDots"></div>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section class="finale" id="finale">
+    <div class="finale-inner">
+      <div class="glow-heart big reveal">
+        <svg viewBox="0 0 32 30" aria-hidden="true">
+          <defs>
+            <linearGradient id="heartGrad2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#ffd8c8"/>
+              <stop offset="45%"  stop-color="#e56b8f"/>
+              <stop offset="100%" stop-color="#7a1730"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#heartGrad2)" d="M16 29S1 19.2 1 10.4C1 5.7 4.7 2 9.3 2c2.9 0 5.5 1.5 6.7 3.8C17.2 3.5 19.8 2 22.7 2 27.3 2 31 5.7 31 10.4 31 19.2 16 29 16 29z"/>
+        </svg>
+      </div>
+
+      <h2 class="finale-title reveal" style="--d:.1s">You are special to me ❤️</h2>
+
+      <p class="finale-text reveal" style="--d:.2s">
+        Not because of anything you do — but because of who you are.
+        You make ordinary days feel worth remembering. You are my calm,
+        my chaos, my favourite hello and my hardest goodbye.
+      </p>
+
+      <p class="finale-text reveal" style="--d:.3s">
+        If I had to live it all again, I'd still find you.
+        In every version of this life, in every universe —
+        I would choose you. Every single time.
+      </p>
+
+      <p class="finale-sign reveal" style="--d:.42s">
+        Forever &amp; always,<br />
+        <span>Yours ❤️</span>
+      </p>
+
+      <p class="finale-end reveal" style="--d:.6s">— the end · or maybe just the beginning —</p>
+    </div>
+    <div class="finale-fade" aria-hidden="true"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Made with a lot of love, for one very special person.</p>
+  </footer>
+
+  <!-- MUSIC PLAYER -->
+  <audio id="bgMusic" preload="auto"></audio>
+
+  <div class="music-player" id="musicPlayer" aria-label="Music player">
+    <button class="mp-btn" id="mpToggle" type="button" aria-label="Play or pause music">
+      <svg class="icon-play" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+    </button>
+
+    <div class="mp-main">
+      <div class="mp-top">
+        <span class="mp-title" id="mpTitle">Our Song</span>
+        <span class="mp-time" id="mpTime">0:00</span>
+      </div>
+      <div class="mp-progress" id="mpProgress" role="slider" aria-label="Music progress" tabindex="0">
+        <div class="mp-fill" id="mpFill"></div>
+      </div>
+    </div>
+
+    <div class="mp-vol">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/>
+      </svg>
+      <input type="range" id="mpVolume" min="0" max="1" step="0.01" value="0.55" aria-label="Volume" />
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+    <img id="lightboxImg" alt="Our memory" />
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
